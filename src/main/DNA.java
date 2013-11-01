@@ -59,11 +59,11 @@ public class DNA {
 	public static void main(String[] args) {
 		
 
-		String text = "abacaabadcabacabaabb";
-		String pattern = "abacab";
+		String text = "TCATATGCAAATAGCTGCATACCGA";
+		String pattern = "CATA";
 
-		System.out.print("O texto é: " + text + "\n");
-		System.out.print("A palavra é: " + pattern + "\n");
+		System.out.print("Cadeia maior: " + text + "\n");
+		System.out.print("Cadeia menor: " + pattern + "\n");
 
 		DNA dna = new DNA();
 
