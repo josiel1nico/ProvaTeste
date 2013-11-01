@@ -7,14 +7,17 @@ import org.junit.Before;
 import org.junit.Test;
 
 import main.Competicao;
+import main.CompeticaoCorrigida;
 
 public class AllCombinationsCompeticao {
 
 	private Competicao competicao;
+	//private CompeticaoCorrigida competicao;
 
 	@Before
 	public void Startup() {
 		this.competicao = new Competicao();
+		//this.competicao = new CompeticaoCorrigida();
 	}
 
 	@Test

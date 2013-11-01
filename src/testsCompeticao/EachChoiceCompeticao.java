@@ -2,6 +2,8 @@ package testsCompeticao;
 
 import static org.junit.Assert.assertEquals;
 import main.Competicao;
+import main.CompeticaoCorrigida;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -9,12 +11,14 @@ import org.junit.Test;
 public class EachChoiceCompeticao {
 
 	private Competicao competicao;
+	//private CompeticaoCorrigida competicao;
 
 	@Before
 	public void Startup() {
 		this.competicao = new Competicao();
+		//this.competicao = new CompeticaoCorrigida();
 	}
-	
+
 	@Test
 	public void test1() {
 		int c1b1 = 1;
@@ -31,9 +35,9 @@ public class EachChoiceCompeticao {
 		int c3b2 = 10001;
 		assertEquals(false, competicao.resultado(c1b2, c2b2, c3b2));
 	}
-	
+
 	@After
-	public void TearDown(){
+	public void TearDown() {
 		this.competicao = null;
 	}
 }
