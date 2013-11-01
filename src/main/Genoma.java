@@ -1,7 +1,5 @@
 package main;
 
-import java.util.Scanner;
-
 public class Genoma {
     private static String cadeiaP = new String(), cadeiaT = new String();
     private static int tamanhoCadeiaP = 0;
