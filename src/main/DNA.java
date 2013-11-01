@@ -58,7 +58,6 @@ public class DNA {
 	
 	public static void main(String[] args) {
 		
-
 		String text = "TCATATGCAAATAGCTGCATACCGA";
 		String pattern = "CATA";
 
