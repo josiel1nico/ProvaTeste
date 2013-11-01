@@ -18,7 +18,7 @@ public class DNA {
 		do {
 			if (pattern.charAt(j) == text.charAt(i)) {
 				if (j == 0) {
-					return i; // achado
+					System.out.println("Posicão do inicio do padrão no texto: " + i); // achado
 				} else { // heuristica do espelho: do fim para o inicio do
 							// padrão
 					i--;
