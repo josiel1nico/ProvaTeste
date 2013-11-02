@@ -21,8 +21,8 @@ public class Genoma {
     public static String getResult(){
             String auxStr, returnValue = new String();
             auxStr = inverseLetters(cadeiaP);
-            returnValue  = "ocorrencia direta: "+getOccurences(cadeiaP,cadeiaT);
-            returnValue += "\nocorrencia complementar invertida: "+getOccurences(auxStr,cadeiaT);
+            returnValue  = getOccurences(cadeiaP,cadeiaT).concat(getOccurences(auxStr,cadeiaT));
+            //returnValue += getOccurences(auxStr,cadeiaT);
             return returnValue;
     }//END FUNCTION
     
@@ -33,7 +33,7 @@ public class Genoma {
                     for(int i=0,j=(lenT-lenP);i<=j;i++){
                             c = t.substring(i,i+lenP);
                             if(c.equalsIgnoreCase(p)){
-                                    returnValue+= (i+1)+" ";
+                                    returnValue+= (i+1);
                             }//END IF
                     }//END FOR
             }//END IF
@@ -79,9 +79,9 @@ public class Genoma {
         setCadeiaT("TGGT");
         showMessage(getResult());
         
-        setTamanhoCadeias(4, 25);
-        setCadeiaP("CATA");
-        setCadeiaT("TCATATGCAAATAGCTGCATACCGA");
+        setTamanhoCadeias(20, 20);
+        setCadeiaP("TCATATGCAAATAGCTGCAT");
+        setCadeiaT("TCATATGCAAATAGCTGCAT");
         showMessage(getResult());
 	}//END FUNCTION
 
