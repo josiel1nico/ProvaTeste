@@ -9,33 +9,34 @@ public class Cartao {
 		this.saldo = saldo;
 	}
 	
-	public int addCredito(Cartao card, int s){
-		int saida = 0;
+	public boolean addCredito(Cartao card, int s){
+		boolean saida = false;
 		if(card.tipo == "livre") {
-			saida = card.saldo;
+			saida = true;
 		}
 		else{
 			if((100 - card.saldo) >= s){
 				card.saldo += s;
+				saida = true;
 			}
-			saida = card.saldo;
 		}
 		return saida;
 	}
-	public int debCartao(Cartao card, int s){
-		int saida = 0;
+	public boolean debCartao(Cartao card, int s){
+		boolean saida = false;
 		if(card.tipo == "livre") {
-			saida = card.saldo;
+			saida = true;
 		}
 		else if(card.tipo == "estudante"){
 			if((card.saldo - s) >= 0){
 				card.saldo -= s;
+				saida = true;
 			}
-			saida = card.saldo;
 		}
 		else{
 			if((card.saldo - 2*s) >= 0){
 				card.saldo -= 2*s;
+				saida = true;
 			}
 		}
 		return saida;
